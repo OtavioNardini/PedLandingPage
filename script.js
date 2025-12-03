@@ -83,3 +83,59 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+
+// Animações da seção problema
+document.addEventListener('DOMContentLoaded', function () {
+    const problemSection = document.querySelector('.problem-section');
+    
+    if (problemSection) {
+        const problemObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Anima o título
+                    const title = problemSection.querySelector('.section-title');
+                    if (title) {
+                        title.classList.add('animate');
+                    }
+                    
+                    // Anima os elementos em sequência
+                    setTimeout(() => {
+                        const intro = problemSection.querySelector('.problem-intro');
+                        if (intro) intro.classList.add('animate');
+                    }, 200);
+                    
+                    setTimeout(() => {
+                        const text = problemSection.querySelector('.problem-text');
+                        if (text) text.classList.add('animate');
+                    }, 400);
+                    
+                    setTimeout(() => {
+                        const highlight = problemSection.querySelector('.problem-highlight');
+                        if (highlight) highlight.classList.add('animate');
+                    }, 600);
+                    
+                    // Anima os problem-items em cascata
+                    setTimeout(() => {
+                        const items = problemSection.querySelectorAll('.problem-item');
+                        items.forEach(item => {
+                            item.classList.add('animate');
+                        });
+                    }, 800);
+                    
+                    // Anima a conclusão
+                    setTimeout(() => {
+                        const conclusion = problemSection.querySelector('.problem-conclusion');
+                        if (conclusion) conclusion.classList.add('animate');
+                    }, 1800);
+                    
+                    // Para de observar após animar
+                    problemObserver.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.2 // Ativa quando 20% da seção estiver visível
+        });
+        
+        problemObserver.observe(problemSection);
+    }
+});

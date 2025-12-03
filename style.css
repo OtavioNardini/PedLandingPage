@@ -91,6 +91,7 @@ body {
 
 /* Lista de benefícios */
 .benefits-list {
+    list-style: none;
     max-width: 700px;
     margin: 40px auto;
     padding-left: 20px;
@@ -108,7 +109,7 @@ body {
     content: "✓";
     position: absolute;
     left: 0;
-    color: #0199c8;
+    color: #15c801;
     font-weight: bold;
     font-size: 1.3rem;
 }
@@ -345,6 +346,7 @@ body {
         grid-template-columns: 1fr;
     }
 }
+
 /* Seção FAQ */
 .faq {
     background-color: white;
@@ -536,16 +538,16 @@ body {
     .timeline::before {
         left: 30px;
     }
-    
+
     .timeline-item::before {
         left: 30px;
     }
-    
+
     .timeline-item.left,
     .timeline-item.right {
         justify-content: flex-end;
     }
-    
+
     .timeline-item.left .timeline-content,
     .timeline-item.right .timeline-content {
         width: calc(100% - 70px);
@@ -648,24 +650,30 @@ body {
 
 .problem-points {
     display: grid;
-    gap: 15px;
+    gap: 12px;
     margin: 30px 0;
+    max-width: 400px;
+    /* Alinha à esquerda mantendo margem automática só na direita */
+    margin-left: 0;
+    margin-right: auto;
+    text-align: left;
 }
 
 .problem-item {
     background: white;
-    padding: 15px 20px;
+    padding: 12px 18px;
     border-radius: 8px;
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: #e74c3c;
     font-weight: 500;
+    max-width: 100%;
 }
 
 .problem-conclusion {
     font-size: 1.2rem;
     font-weight: 600;
     color: #2c3e50;
-    margin-top: 30px;
+    margin-top: 60px;
     line-height: 1.6;
 }
 
@@ -994,16 +1002,145 @@ body {
     .main-headline {
         font-size: 1.6rem;
     }
-    
+
     .story-highlight,
     .problem-highlight {
         font-size: 1.1rem;
         padding: 15px;
     }
-    
+
     .comparison-grid,
     .benefits-columns {
         grid-template-columns: 1fr;
     }
 }
 
+
+/* Animações para a seção problema */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Título da seção problema */
+.problem-section .section-title {
+    opacity: 0;
+    animation: fadeInUp 1s ease forwards;
+}
+
+.problem-section .section-title.animate {
+    animation: fadeInUp 1s ease forwards;
+}
+
+/* Problem items com animação em cascata */
+.problem-item {
+    opacity: 0;
+    transform: translateX(-50px);
+}
+
+.problem-item.animate {
+    animation: slideInLeft 0.6s ease forwards;
+}
+
+/* Delay em cascata para cada item */
+.problem-item:nth-child(1).animate {
+    animation-delay: 0.1s;
+}
+
+.problem-item:nth-child(2).animate {
+    animation-delay: 0.3s;
+}
+
+.problem-item:nth-child(3).animate {
+    animation-delay: 0.5s;
+}
+
+.problem-item:nth-child(4).animate {
+    animation-delay: 0.7s;
+}
+
+/* Outros elementos da seção também podem ter fade-in */
+.problem-intro,
+.problem-text,
+.problem-highlight,
+.problem-conclusion {
+    opacity: 0;
+}
+
+.problem-intro.animate,
+.problem-text.animate,
+.problem-highlight.animate,
+.problem-conclusion.animate {
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+/* Estilização da conclusão do problema */
+.problem-conclusion {
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-top: 60px;
+    line-height: 1.4;
+    text-transform: uppercase;
+}
+
+.problem-conclusion .text-red {
+    color: #e74c3c;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.problem-conclusion .text-blue {
+    color: #0199c8;
+    font-size: 2rem;
+}
+
+/* Responsividade para a conclusão */
+@media (max-width: 768px) {
+    .problem-conclusion {
+        font-size: 1.4rem;
+    }
+
+    .problem-conclusion .text-blue {
+        font-size: 1.6rem;
+    }
+}
+
+.texto-principal {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 1.2;
+    text-align: center;
+    padding: 50px;
+}
+
+/* Cores */
+.frase-vermelha {
+    color: #D44138;
+}
+
+.frase-azul-e-preto {
+    color: #3A3F47;
+}
+
+.parte-azul {
+    color: #58A3BF;
+}
