@@ -36,7 +36,30 @@ body {
 .hero {
     background-color: white;
     padding: 60px 0;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
 }
+
+
+
+
+/* Aplicando o seu gradiente na parte final */
+.parte-gradiente {
+    /* 1. Definir o seu gradiente de fundo */
+    background: linear-gradient(135deg, #0199c8 0%, #ff8490 100%);
+
+    /* 2. Aplicar o gradiente apenas ao texto (Truque essencial) */
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    /* 3. Tornar o texto transparente para o fundo aparecer */
+    color: transparent;
+
+    /* Garantir que o peso da fonte seja o mesmo do restante */
+    font-weight: 700;
+}
+
 
 .section-title {
     font-size: 2rem;
@@ -60,6 +83,8 @@ body {
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 10;
 }
 
 .video-placeholder {
@@ -616,6 +641,9 @@ body {
 .problem-section {
     background: linear-gradient(135deg, #f8f9fa 0%, #ecf0f1 100%);
     padding: 60px 0;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
 }
 
 .problem-list {
@@ -1146,4 +1174,55 @@ body {
 
 .parte-azul {
     color: #58A3BF;
+}
+
+/* Estilizando o ícone do Instagram */
+.wp-image-28096 {
+    /* 1. Posicionamento Flutuante */
+    position: absolute;
+    /* Permite posicionar a imagem livremente */
+    /* Permite posicionar a imagem livremente */
+    top: 280px;
+    /* Ajuste para onde a imagem deve parar na vertical (altura do vídeo) */
+    right: -100px;
+    /* Ajuste para onde a imagem deve parar na horizontal */
+    z-index: -1;
+    /* Garante que ela fique por trás de outros elementos */
+
+    /* 2. Inclinação (Rotação) */
+    transform: rotate(-20deg);
+    /* Gira a imagem em -10 graus (ajuste o valor) */
+
+    /* 3. Ajuste do Tamanho (Se necessário) */
+    width: 383px;
+    /* Use o tamanho exato da sua imagem (383x396px) */
+    height: 396px;
+}
+
+.wp-image-280961 {
+    /* 1. Posicionamento Flutuante */
+    position: absolute;
+    top: 400px;
+    right: 50px;
+    /* Ajuste para onde a imagem deve parar na horizontal */
+    z-index: -1;
+    /* Garante que ela fique por trás de outros elementos */
+
+    /* 2. Inclinação (Rotação) */
+    transform: rotate(20deg);
+    /* Gira a imagem em -10 graus (ajuste o valor) */
+
+    /* 3. Ajuste do Tamanho (Se necessário) */
+    width: 383px;
+    /* Use o tamanho exato da sua imagem (383x396px) */
+    height: 396px;
+}
+
+/* Responsividade para a imagem flutuante */
+@media (max-width: 768px) {
+
+    .wp-image-28096,
+    .wp-image-280961 {
+        display: none;
+    }
 }
