@@ -51,6 +51,24 @@ body {
     z-index: 1;
 }
 
+/* Logo responsiva no header */
+.header img {
+    max-width: 100%;
+    height: auto;
+    width: clamp(250px, 50vw, 500px);
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+    filter: drop-shadow(0 8px 25px rgba(0, 0, 0, 0.2));
+    transition: all 0.3s ease;
+}
+
+.header img:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(0 12px 35px rgba(0, 0, 0, 0.3));
+}
+
 /* ========================================
    SEÇÃO HERO - DESIGN PREMIUM
    ======================================== */
@@ -1830,7 +1848,6 @@ body {
 }
 
 .promise-box::after {
-    content: '🛡️';
     position: absolute;
     bottom: -20px;
     right: 30px;
@@ -1841,7 +1858,7 @@ body {
 .solution-promise {
     font-size: 1.35rem;
     text-align: center;
-    color: white;
+    color: rgb(0, 0, 0);
     line-height: 1.8;
     margin: 0;
 }
@@ -2476,4 +2493,48 @@ body {
     color: #4a5568;
     line-height: 1.7;
     font-size: 1.05rem;
+}
+
+/* ========================================
+   MEDIA QUERIES - RESPONSIVIDADE
+   ======================================== */
+
+/* Tablets e telas médias */
+@media (max-width: 1024px) {
+    .header img {
+        width: clamp(220px, 45vw, 450px);
+    }
+}
+
+/* Tablets pequenos */
+@media (max-width: 768px) {
+    .header {
+        padding: 30px 0 80px 0;
+    }
+
+    .header img {
+        width: clamp(200px, 60vw, 400px);
+    }
+}
+
+/* Smartphones */
+@media (max-width: 480px) {
+    .header {
+        padding: 25px 0 70px 0;
+    }
+
+    .header img {
+        width: clamp(180px, 70vw, 300px);
+    }
+}
+
+/* Smartphones pequenos */
+@media (max-width: 360px) {
+    .header {
+        padding: 20px 0 60px 0;
+    }
+
+    .header img {
+        width: clamp(150px, 80vw, 250px);
+    }
 }
