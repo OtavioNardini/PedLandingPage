@@ -995,53 +995,6 @@ body {
     color: #555;
 }
 
-.target-audience {
-    background: linear-gradient(135deg, #0199c8 0%, #ff8490 100%);
-    color: white;
-    padding: 40px;
-    border-radius: 20px;
-    max-width: 650px;
-    margin: 40px auto;
-    text-align: center;
-    box-shadow: 0 10px 30px rgba(1, 153, 200, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.target-audience:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 40px rgba(1, 153, 200, 0.3);
-}
-
-.target-audience p {
-    font-size: 1.3rem;
-    font-weight: 700;
-    margin-bottom: 25px;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.target-audience ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-}
-
-.target-audience li {
-    font-size: 1.1rem;
-    background: rgba(255, 255, 255, 0.2);
-    padding: 10px 20px;
-    border-radius: 50px;
-    backdrop-filter: blur(5px);
-    font-weight: 500;
-    transition: background 0.3s ease;
-}
-
-.target-audience li:hover {
-    background: rgba(255, 255, 255, 0.3);
-}
-
 .solution-promise {
     text-align: center;
     font-size: 1.4rem;
@@ -1089,8 +1042,8 @@ body {
 
 .content-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 35px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
     margin-top: 50px;
     position: relative;
     z-index: 1;
@@ -1099,7 +1052,7 @@ body {
 .content-card {
     background: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(15px);
-    padding: 40px;
+    padding: 10px;
     border-radius: 20px;
     text-align: center;
     box-shadow:
@@ -1746,114 +1699,8 @@ body {
     border: none;
 }
 
-.solution-section {
-    padding: 80px 20px;
-    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
-    position: relative;
-    overflow: hidden;
-}
 
-.solution-section::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    right: -10%;
-    width: 500px;
-    height: 500px;
-    background: linear-gradient(135deg, rgba(255, 107, 150, 0.1), rgba(0, 176, 217, 0.1));
-    border-radius: 50%;
-    z-index: 0;
-}
 
-.solution-intro {
-    font-size: 1.3rem;
-    text-align: center;
-    margin-bottom: 50px;
-    color: #555;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.solution-intro strong {
-    color: #00b0d9;
-    font-weight: 700;
-}
-
-.target-audience-card {
-    background: linear-gradient(135deg, #00b0d9 0%, #0099c2 100%);
-    padding: 40px;
-    border-radius: 25px;
-    box-shadow: 0 20px 60px rgba(0, 176, 217, 0.3);
-    margin-bottom: 50px;
-    position: relative;
-    overflow: hidden;
-}
-
-.target-audience-card::before {
-    content: '';
-    position: absolute;
-    top: -50px;
-    right: -50px;
-    width: 200px;
-    height: 200px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 50%;
-}
-
-.card-header h3 {
-    color: white;
-    font-size: 1.5rem;
-    text-align: center;
-    margin-bottom: 35px;
-    font-weight: 600;
-}
-
-.audience-item {
-
-    margin-top: 30px;
-    background: rgba(255, 255, 255, 0.95);
-    padding: 25px 20px;
-    border-radius: 15px;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
-.audience-item:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-}
-
-.audience-item .emoji {
-    font-size: 3rem;
-    display: block;
-    margin-bottom: 15px;
-}
-
-.audience-item .text {
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: #2c3e50;
-    display: block;
-}
-
-.promise-box {
-    background: linear-gradient(135deg, #ff6b96 0%, #ff4d7d 100%);
-    padding: 40px;
-    border-radius: 20px;
-    margin-bottom: 40px;
-    box-shadow: 0 20px 60px rgba(255, 107, 150, 0.3);
-    position: relative;
-}
-
-.promise-box::after {
-    position: absolute;
-    bottom: -20px;
-    right: 30px;
-    font-size: 5rem;
-    opacity: 0.3;
-}
 
 .solution-promise {
     font-size: 1.35rem;
@@ -1863,11 +1710,7 @@ body {
     margin: 0;
 }
 
-.solution-promise strong {
-    color: #ffd93d;
-    font-weight: 700;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-}
+
 
 .solution-finale {
     font-size: 1.25rem;
@@ -1880,45 +1723,8 @@ body {
     border-left: 5px solid #00b0d9;
 }
 
-.solution-finale strong {
-    color: #ff6b96;
-    font-weight: 700;
-}
 
-@media (max-width: 768px) {
-    .section-title {
-        font-size: 2rem;
-    }
 
-    .solution-intro {
-        font-size: 1.1rem;
-    }
-
-    .target-audience-card {
-        padding: 30px 20px;
-    }
-
-    .card-header h3 {
-        font-size: 1.3rem;
-    }
-
-    .audience-grid {
-        grid-template-columns: 1fr;
-        gap: 15px;
-    }
-
-    .promise-box {
-        padding: 30px 20px;
-    }
-
-    .solution-promise {
-        font-size: 1.15rem;
-    }
-
-    .solution-finale {
-        font-size: 1.1rem;
-    }
-}
 
 /* ========================================
    SEÇÃO CONTEÚDO - DESIGN PREMIUM
@@ -2289,108 +2095,7 @@ body {
 /* ========================================
    SOLUTION SECTION - MELHORIAS
    ======================================== */
-.solution-section {
-    background: linear-gradient(180deg, #ffffff 0%, #f0f8ff 50%, #ffffff 100%);
-    padding: 80px 0;
-    position: relative;
-    overflow: hidden;
-}
 
-.solution-section::before {
-    content: '';
-    position: absolute;
-    bottom: -25%;
-    right: -15%;
-    width: 650px;
-    height: 650px;
-    background: radial-gradient(circle, rgba(255, 132, 144, 0.06) 0%, transparent 70%);
-    border-radius: 50%;
-    pointer-events: none;
-}
-
-.target-audience-card {
-    background: linear-gradient(135deg, #0199c8 0%, #ff8490 100%);
-    color: white;
-    padding: 45px;
-    border-radius: 25px;
-    max-width: 700px;
-    margin: 50px auto;
-    text-align: center;
-    box-shadow:
-        0 15px 50px rgba(1, 153, 200, 0.3),
-        inset 0 1px 0 rgba(255, 255, 255, 0.2);
-    transition: all 0.4s ease;
-    position: relative;
-    overflow: hidden;
-}
-
-.target-audience-card::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: linear-gradient(45deg,
-            transparent 30%,
-            rgba(255, 255, 255, 0.1) 50%,
-            transparent 70%);
-    transform: rotate(45deg);
-    transition: all 0.6s ease;
-    opacity: 0;
-}
-
-.target-audience-card:hover::before {
-    opacity: 1;
-    animation: shine 1.5s ease-in-out;
-}
-
-.target-audience-card:hover {
-    transform: translateY(-10px) scale(1.02);
-    box-shadow:
-        0 25px 70px rgba(1, 153, 200, 0.4),
-        inset 0 1px 0 rgba(255, 255, 255, 0.3);
-}
-
-.card-header h3 {
-    font-size: 1.8rem;
-    margin-bottom: 30px;
-    font-weight: 700;
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.audience-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    margin-top: 25px;
-}
-
-.audience-item {
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(10px);
-    padding: 20px;
-    border-radius: 15px;
-    transition: all 0.3s ease;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-}
-
-.audience-item:hover {
-    background: rgba(255, 255, 255, 0.3);
-    transform: translateY(-5px);
-    border-color: rgba(255, 255, 255, 0.5);
-}
-
-.audience-item .emoji {
-    font-size: 2.5rem;
-    display: block;
-    margin-bottom: 10px;
-}
-
-.audience-item .text {
-    font-size: 1.1rem;
-    font-weight: 600;
-}
 
 .promise-box {
     background: rgba(1, 153, 200, 0.05);
@@ -2406,7 +2111,7 @@ body {
    ======================================== */
 .about-doctors {
     background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 50%, #f0f8ff 100%);
-    padding: 80px 0;
+    padding: 0 0 80px 0;
     position: relative;
     overflow: hidden;
 }
@@ -2421,6 +2126,87 @@ body {
     background: radial-gradient(circle, rgba(1, 153, 200, 0.05) 0%, transparent 70%);
     border-radius: 50%;
     pointer-events: none;
+}
+
+/* Banner Hero com Imagem de Fundo Estilo Card */
+/* Banner Hero com Imagem de Fundo Estilo Story (Vertical sempre) */
+.about-hero-banner {
+    position: relative;
+    width: 100%;
+    max-width: 450px;
+    /* Largura de Story no Desktop */
+    margin: 60px auto;
+    aspect-ratio: 9 / 16;
+    /* Formato Story Vertical */
+    background-image: url('../img/medicas.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    border-radius: 24px;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.25);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.about-hero-banner:hover {
+    transform: translateY(-5px);
+    /* Leve flutuação ao passar o mouse */
+    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.3);
+}
+
+.about-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Gradiente Story: Escuro nas pontas, Transparente no meio */
+    background: linear-gradient(180deg,
+            rgba(0, 0, 0, 0.85) 0%,
+            rgba(0, 0, 0, 0.5) 15%,
+            rgba(0, 0, 0, 0) 25%,
+            rgba(0, 0, 0, 0) 75%,
+            rgba(0, 0, 0, 0.6) 85%,
+            rgba(0, 0, 0, 0.95) 100%);
+    display: flex;
+    align-items: stretch;
+    /* Ocupa altura toda */
+}
+
+/* Flexbox para separar topo e base */
+.about-hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding: 40px 30px;
+    text-align: center;
+    color: white;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+.about-hero-title {
+    font-size: 2rem;
+    /* Tamanho equilibrado */
+    font-weight: 800;
+    text-transform: uppercase;
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
+    line-height: 1.2;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.about-hero-subtitle {
+    font-size: 1.1rem;
+    font-weight: 500;
+    line-height: 1.5;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+    opacity: 0.95;
+    margin-bottom: 10px;
+    padding: 0;
+    border: none;
 }
 
 .about-intro,
@@ -2495,6 +2281,7 @@ body {
     font-size: 1.05rem;
 }
 
+
 /* ========================================
    MEDIA QUERIES - RESPONSIVIDADE
    ======================================== */
@@ -2503,6 +2290,14 @@ body {
 @media (max-width: 1024px) {
     .header img {
         width: clamp(220px, 45vw, 450px);
+    }
+
+    .about-hero-title {
+        font-size: 2.2rem;
+    }
+
+    .about-hero-subtitle {
+        font-size: 1.2rem;
     }
 }
 
@@ -2515,6 +2310,21 @@ body {
     .header img {
         width: clamp(200px, 60vw, 400px);
     }
+
+    /* Ajustar apenas largura para tablets, layout já é vertical */
+    .about-hero-banner {
+        width: 60%;
+        /* Um pouco mais largo que no desktop, mas não tela cheia */
+        max-width: 400px;
+    }
+
+    .about-hero-title {
+        font-size: 1.8rem;
+    }
+
+    .about-hero-subtitle {
+        font-size: 1.05rem;
+    }
 }
 
 /* Smartphones */
@@ -2526,6 +2336,26 @@ body {
     .header img {
         width: clamp(180px, 70vw, 300px);
     }
+
+    /* Mobile: Ocupar quase toda a largura */
+    .about-hero-banner {
+        width: 95%;
+        max-width: none;
+        margin: 20px auto;
+        border-radius: 15px;
+    }
+
+    .about-hero-content {
+        padding: 25px 15px;
+    }
+
+    .about-hero-title {
+        font-size: 1.5rem;
+    }
+
+    .about-hero-subtitle {
+        font-size: 0.95rem;
+    }
 }
 
 /* Smartphones pequenos */
@@ -2536,5 +2366,18 @@ body {
 
     .header img {
         width: clamp(150px, 80vw, 250px);
+    }
+
+    /* Banner ainda mais vertical para telas muito pequenas */
+    .about-hero-banner {
+        aspect-ratio: 3 / 4;
+    }
+
+    .about-hero-title {
+        font-size: 1.4rem;
+    }
+
+    .about-hero-subtitle {
+        font-size: 0.95rem;
     }
 }
