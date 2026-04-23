@@ -2482,3 +2482,41 @@ body {
         font-size: 0.95rem;
     }
 }
+
+/* Estilo para o Sumário */
+.sumario-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    text-align: left;
+}
+
+.sumario-list li {
+    font-weight: 700;
+    font-size: 0.95rem;
+    padding: 8px 12px;
+    border-bottom: 1px dashed rgba(1, 153, 200, 0.2);
+    color: #4a5568;
+    position: relative;
+    padding-left: 25px;
+    transition: all 0.3s ease;
+}
+
+.sumario-list li:last-child {
+    border-bottom: none;
+}
+
+.sumario-list li:hover {
+    color: #0199c8;
+    transform: translateX(5px);
+}
+
+.sumario-list li::before {
+    content: "•";
+    color: #ff8490;
+    position: absolute;
+    left: 8px;
+    font-size: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
