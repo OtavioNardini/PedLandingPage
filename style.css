@@ -285,6 +285,65 @@ body {
 }
 
 /* ========================================
+   PRICING INFO - DESIGN PREMIUM
+   ======================================== */
+.cta-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px auto;
+}
+
+.cta-container .cta-button {
+    margin: 0 0 15px 0; /* Remove a margem extra do botão pois o container já a possui */
+}
+
+.pricing-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    text-align: center;
+}
+
+.pricing-info .price {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.pricing-info .price strong {
+    font-size: 1.8rem;
+    background: linear-gradient(135deg, #0199c8 0%, #ff8490 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: 900;
+    line-height: 1;
+}
+
+.pricing-info .shipping {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+    color: white;
+    padding: 5px 16px;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 0.95rem;
+    box-shadow: 0 4px 15px rgba(39, 174, 96, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    animation: pulse-shipping 2s infinite;
+}
+
+@keyframes pulse-shipping {
+    0% { transform: scale(1); box-shadow: 0 4px 15px rgba(39, 174, 96, 0.3); }
+    50% { transform: scale(1.05); box-shadow: 0 6px 20px rgba(39, 174, 96, 0.5); }
+    100% { transform: scale(1); box-shadow: 0 4px 15px rgba(39, 174, 96, 0.3); }
+}
+
+/* ========================================
    CONTAINERS DE IMAGEM - DESIGN PREMIUM
    ======================================== */
 .elementor-widget-container,
